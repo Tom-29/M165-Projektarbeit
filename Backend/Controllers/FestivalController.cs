@@ -22,7 +22,7 @@ public class FestivalController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Festival>> GetFestivalById(string id)
+    public async Task<ActionResult<FestivalWithArtists>> GetFestivalById(string id)
     {
         return await _festivalService.GetFestivalByIdAsync(id);
     }
