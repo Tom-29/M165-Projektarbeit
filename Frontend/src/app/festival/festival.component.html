@@ -1,0 +1,33 @@
+<div class="festival-details" *ngIf="festival">
+  <h2>{{ festival.name }}</h2>
+  <p><strong>Country:</strong> {{ festival.country }}</p>
+  <p><strong>Genre:</strong> {{ festival.genre }}</p>
+  <p><strong>Date:</strong> {{ date }}</p>
+
+  <div *ngIf="artists">
+    <h3>Artists:</h3>
+    <ul>
+      <li *ngFor="let artist of artists">
+        <strong>{{ artist.name }}</strong>
+        <span *ngIf="artist.birthday"> ({{ artist.birthday }})</span>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="festival.prices && festival.prices.length">
+    <h3>Prices:</h3>
+    <ul>
+      <li *ngFor="let price of festival.prices">{{ price.name }}: {{ formatCurrency(price.amount) }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="festival.ratings && festival.ratings.length">
+    <h3>Ratings:</h3>
+    <ul>
+      <li *ngFor="let rating of festival.ratings">
+        <span *ngIf="rating.comment"><strong>{{ rating.username }}:</strong> {{ rating.comment }} ({{ rating.stars }} stars)</span>
+        <span *ngIf="!rating.comment"><strong>{{ rating.username }}:</strong> {{ rating.stars }} stars</span>
+      </li>
+    </ul>
+  </div>
+</div>

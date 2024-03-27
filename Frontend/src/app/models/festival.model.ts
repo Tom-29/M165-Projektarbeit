@@ -1,8 +1,19 @@
-import {Artist} from "./artist.model";
-
 export interface Festival {
-  id: number;
+  id: string;
   name: string;
-  location: string;
-  lineup: Artist[];
+  country: string;
+  genre: string;
+  date: {
+    startDate: Date;
+    endDate: Date;
+  } | Date;
+  prices?: {
+    name: string;
+    amount: number;
+  }[];
+  ratings?: {
+    stars: number;
+    comment?: string;
+    username: string;
+  }[];
 }

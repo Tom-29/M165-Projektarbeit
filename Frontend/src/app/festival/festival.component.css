@@ -1,0 +1,33 @@
+/* festival-details.component.css */
+
+.festival-details {
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.festival-details h2 {
+  color: #333;
+}
+
+.festival-details p {
+  margin: 5px 0;
+}
+
+.festival-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.festival-details ul li {
+  margin-bottom: 5px;
+}
+
+.festival-details ul li span {
+  display: block;
+}
+
+.festival-details ul li strong {
+  font-weight: bold;
+}

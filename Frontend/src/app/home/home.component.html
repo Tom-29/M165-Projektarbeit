@@ -1,0 +1,7 @@
+<h1 style="margin-bottom: 0;">Welcome to FestivalTracker</h1>
+<h3 style="margin-top: 0;">Made by Tom and Jeremias</h3>
+<div class="page-container">
+  <div *ngFor="let festival of festivals" class="container" routerLink="/festival/{{festival.id}}">
+    <p>{{festival.name}}</p>
+  </div>
+</div>

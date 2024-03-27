@@ -1,8 +1,6 @@
-import {Festival} from "./festival.model";
-
 export interface Artist {
-  id: number;
+  id: string;
+  country: string;
   name: string;
-  age: number;
-  festivals: Festival[];
+  birthday?: Date;
 }
