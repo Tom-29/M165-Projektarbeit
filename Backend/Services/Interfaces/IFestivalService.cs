@@ -6,5 +6,5 @@ public interface IFestivalService
 {
     public Task<List<Festival>> GetAllFestivalsAsync();
 
-    public Task<Festival> GetFestivalByIdAsync(string id);
+    public Task<FestivalWithArtists> GetFestivalByIdAsync(string id);
 }

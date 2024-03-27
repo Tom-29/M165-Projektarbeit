@@ -20,4 +20,6 @@ public class Artist
 
     [BsonElement("birthdate")]
     public DateTime? Birthdate { get; set; }
+    
+    public DateTime? Date { get; set; }
 }
