@@ -26,4 +26,10 @@ public class FestivalController : ControllerBase
     {
         return await _festivalService.GetFestivalByIdAsync(id);
     }
+
+    [HttpPost("{festivalId}")]
+    public async Task PostRating(string festivalId, [FromBody] Rating rating)
+    {
+        await _festivalService.PostRatingAsync(festivalId, rating);
+    }
 }

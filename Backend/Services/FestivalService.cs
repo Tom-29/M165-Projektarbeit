@@ -44,4 +44,11 @@ public class FestivalService : IFestivalService
         festivalWithArtists.Festival.Artists = null;
         return festivalWithArtists;
     }
+
+    public async Task PostRatingAsync(string festivalId, Rating rating)
+    {
+        var filter = Builders<Festival>.Filter.Eq("Id", festivalId);
+        var update = Builders<Festival>.Update.AddToSet<Rating>("ratings", rating);
+        await _festivalCollection.UpdateOneAsync(filter, update);
+    }
 }

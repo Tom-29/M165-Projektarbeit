@@ -30,4 +30,23 @@
       </li>
     </ul>
   </div>
+
+  <div>
+    <h3>Post a Rating:</h3>
+    <form (ngSubmit)="postRating()">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="newRating.username" required>
+      </div>
+      <div>
+        <label for="stars">Stars:</label>
+        <input type="number" id="stars" name="stars" [(ngModel)]="newRating.stars" required>
+      </div>
+      <div>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" [(ngModel)]="newRating.comment"></textarea>
+      </div>
+      <button type="submit">Submit Rating</button>
+    </form>
+  </div>
 </div>
