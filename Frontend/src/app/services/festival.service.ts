@@ -35,7 +35,7 @@ export class FestivalService {
         "comment": comment
       }
     }
-    console.log("t")
+    console.log(body)
     return this.http.post(`${this.baseUrl}/festival/${id}`, body)
   }
 

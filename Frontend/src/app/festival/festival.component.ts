@@ -56,7 +56,7 @@ export class FestivalComponent implements OnInit {
 
   postRating() {
     const id = this.route.snapshot.params["id"]
-    this.festivalService.postRating(id, this.newRating.username, this.newRating.stars, this.newRating.stars)
+    this.festivalService.postRating(id, this.newRating.username, this.newRating.stars, this.newRating.comment)
       .subscribe(data => {
         console.log(data)
         this.getData()
